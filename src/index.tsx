@@ -9,3 +9,4 @@ const SolidECharts: Component<SolidEChartsProps> = (props) => {
 };
 
 export default SolidECharts;
+export { SolidEChartsCore };

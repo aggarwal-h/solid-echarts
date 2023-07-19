@@ -16,7 +16,7 @@ const generateData = () => {
   return data;
 };
 
-const option = (): EChartsOption => ({
+const getOption = (): EChartsOption => ({
   tooltip: {
     trigger: "axis",
     position: function (pt) {
@@ -68,13 +68,13 @@ const option = (): EChartsOption => ({
 });
 
 const App: Component = () => {
-  const [opt, setOpt] = createSignal(option());
+  const [option, setOption] = createSignal(getOption());
 
   return (
     <>
       <SolidECharts
         echarts={echarts}
-        option={opt()}
+        option={option()}
         style={{
           width: "100%",
           height: "900px",
@@ -82,7 +82,7 @@ const App: Component = () => {
         opts={{ renderer: "canvas" }}
         debouncedResize={false}
       />
-      <button onClick={() => setOpt(option())}>Change it!</button>
+      <button onClick={() => setOption(getOption())}>Change it!</button>
     </>
   );
 };
