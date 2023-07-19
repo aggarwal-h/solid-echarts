@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "Supercharge your Data Visualization in Solid. Powered by ECharts.",
   "author": "Himanshu Aggarwal",
+  "private": false,
   "sideEffects": false,
   "type": "module",
   "main": "dist/index.js",
@@ -16,7 +17,9 @@
     "prepublishOnly": "pnpm build",
     "format": "prettier --ignore-path .gitignore -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
     "update-deps": "pnpm up -Li",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "ci": "pnpm run lint && pnpm run build",
+    "release": "pnpm run lint && pnpm run build && changeset publish"
   },
   "keywords": [
     "solidjs",
