@@ -1,7 +1,7 @@
 import { createSignal, type Component } from "solid-js";
-import type { EChartsOption } from "../../src/types";
+import type { EChartsOption } from "solid-echarts";
 
-import SolidECharts from "../../src";
+import SolidECharts from "solid-echarts";
 import * as echarts from "echarts";
 
 const generateData = () => {
