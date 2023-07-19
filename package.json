@@ -1,0 +1,49 @@
+{
+  "name": "solid-echarts",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Supercharge your Data Visualization in Solid. Powered by ECharts.",
+  "author": "Himanshu Aggarwal",
+  "sideEffects": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite serve dev",
+    "build": "tsup",
+    "lint": "tsc",
+    "prepublishOnly": "pnpm build",
+    "format": "prettier --ignore-path .gitignore -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
+    "update-deps": "pnpm up -Li",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "solidjs",
+    "echarts",
+    "svg",
+    "canvas",
+    "webgl",
+    "solid",
+    "charts"
+  ],
+  "dependencies": {
+    "@solid-primitives/resize-observer": "^2.0.18",
+    "@solid-primitives/scheduled": "^1.3.2",
+    "solid-js": "^1.7.6"
+  },
+  "peerDependencies": {
+    "echarts": "^5.0.0",
+    "solid-js": "*"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "echarts": "^5.4.3",
+    "solid-devtools": "^0.27.3",
+    "tsup": "^7.1.0",
+    "tsup-preset-solid": "^0.1.8",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9",
+    "vite-plugin-solid": "^2.7.0"
+  }
+}
