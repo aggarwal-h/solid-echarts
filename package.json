@@ -1,7 +1,7 @@
 {
   "name": "solid-echarts",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Supercharge your Data Visualization in Solid. Powered by ECharts.",
   "author": "Himanshu Aggarwal",
   "private": false,
