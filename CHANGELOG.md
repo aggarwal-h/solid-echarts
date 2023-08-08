@@ -1,5 +1,11 @@
 # solid-echarts
 
+## 0.0.4
+
+### Patch Changes
+
+- e21c88c: Make types less strict
+
 ## 0.0.3
 
 ### Patch Changes
