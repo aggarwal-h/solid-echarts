@@ -1,8 +1,6 @@
 import { createSignal, type Component } from "solid-js";
-import type { EChartsOption } from "solid-echarts";
-
-import SolidECharts from "solid-echarts";
-import * as echarts from "echarts";
+import type { EChartsOption } from "../../src/";
+import SolidECharts from "../../src";
 
 const generateData = () => {
   let base = +new Date(1988, 9, 3);
@@ -16,16 +14,16 @@ const generateData = () => {
   return data;
 };
 
-const getOption = (): EChartsOption => ({
+const getOption: EChartsOption = () => ({
   tooltip: {
     trigger: "axis",
-    position: function (pt) {
+    position: function (pt: any) {
       return [pt[0], "10%"];
     },
   },
   title: {
     left: "center",
-    text: "Large Ara Chart",
+    text: "Large Area Chart",
   },
   toolbox: {
     feature: {
@@ -40,6 +38,7 @@ const getOption = (): EChartsOption => ({
     type: "time",
     boundaryGap: [0, "2"],
   },
+
   yAxis: {
     type: "value",
     boundaryGap: [0, "100%"],
@@ -73,7 +72,6 @@ const App: Component = () => {
   return (
     <>
       <SolidECharts
-        echarts={echarts}
         option={option()}
         style={{
           width: "100%",
