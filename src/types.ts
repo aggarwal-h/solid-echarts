@@ -1,14 +1,10 @@
-import {
-  init,
-  type SetOptionOpts,
-  type EChartsType,
-  type EChartsOption,
-} from "echarts";
+import { init, type SetOptionOpts, type EChartsType } from "echarts";
 
 type EChartsInit = typeof init;
 type EChartsInitParameters = Parameters<EChartsInit>;
 type EChartsTheme = NonNullable<EChartsInitParameters[1]>;
 type EChartsInitOpts = NonNullable<EChartsInitParameters[2]>;
+type EChartsOption = any;
 
 type StyleProps = {
   [key: string]: string | number;
@@ -18,7 +14,7 @@ type SolidEChartsProps = {
   /**
    * The global ECharts object (full or core).
    */
-  readonly echarts: any;
+  readonly echarts?: any;
 
   /**
    * Additional CSS classes to pass down to the chart container.
