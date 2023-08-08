@@ -1,4 +1,4 @@
-import SolidECharts from "solid-echarts";
+import SolidECharts from "./SolidECharts";
 import SolidEChartsCore from "./SolidEChartsCore";
 import {
   SolidEChartsProps,
